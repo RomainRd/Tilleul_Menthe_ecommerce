@@ -1,0 +1,18 @@
+
+<svg width="473px" height="169px" viewBox="0 0 473 169" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo" transform="translate(-484.000000, -325.000000)">
+            <text id="Tilleul-Menthe" font-family="CabinSketch-Regular, Cabin Sketch" font-size="74" font-weight="normal" fill="#787878">
+                <tspan x="484" y="407">Tilleul-Menthe</tspan>
+            </text>
+            <path d="M484.5,325.5 L962.5,325.5" id="Line" stroke="#979797" stroke-linecap="square" stroke-dasharray="4,9"></path>
+            <path d="M484.5,493.5 L962.5,493.5" id="Line" stroke="#979797" stroke-linecap="square" stroke-dasharray="4,9"></path>
+            <text id="Decoration" font-family="AmaticSC-Regular, Amatic SC" font-size="39" font-weight="normal" fill="#787878">
+                <tspan x="661" y="468">Decoration</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
