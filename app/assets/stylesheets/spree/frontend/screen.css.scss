@@ -9,9 +9,9 @@
 @import 'spree/frontend/navbar_logo';
 @import 'font-awesome';
 
-/*--------------------------------------*/
-/* Basic styles
-/*--------------------------------------*/
+//*--------------------------------------*/
+//* Basic styles
+//*--------------------------------------*/
 body {
   font-family: $ff_base;
   font-size: $base_font_size;
@@ -22,7 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Line style */
+//* Line style */
 hr {
   height: 0;
   background-color: transparent;
@@ -34,9 +34,9 @@ hr {
 ins {background-color: $link_text_color; color: $layout_background_color; text-decoration: none;}
 mark {background-color: $link_text_color; color: $layout_background_color; font-style: italic; font-weight: bold;}
 
-/*--------------------------------------*/
-/* Links
-/*--------------------------------------*/
+//*--------------------------------------*/
+//* Links
+//*--------------------------------------*/
 a {
   text-decoration: none;
   color: $link_text_color;
@@ -50,9 +50,9 @@ a {
   }
 }
 
-/*--------------------------------------*/
-/* Lists
-/*--------------------------------------*/
+//*--------------------------------------*/
+//* Lists
+//*--------------------------------------*/
 ul, ol {
   margin-left: 0;
   margin-top: 0;
@@ -86,9 +86,9 @@ dl {
   }
 }
 
-/*--------------------------------------*/
-/* Headers
-/*--------------------------------------*/
+//*--------------------------------------*/
+//* Headers
+//*--------------------------------------*/
 h1 { font-size: $heading_font_size;         line-height: $heading_font_size + 10;         }
 h2 { font-size: $heading_font_size - 2;     line-height: $heading_font_size - 2 + 10;     }
 h3 { font-size: $heading_font_size - 4;     line-height: $heading_font_size - 4 + 10;     }
@@ -105,9 +105,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
-/*--------------------------------------*/
-/* Forms
-/*--------------------------------------*/
+//*--------------------------------------*/
+//* Forms
+//*--------------------------------------*/
 textarea, input[type="date"],
 input[type="datetime"], input[type="datetime-local"],
 input[type="email"], input[type="month"], input[type="number"],
@@ -231,24 +231,24 @@ a.button {
   vertical-align: bottom;
 }
 
-/*--------------------------------------*/
-/* Footer
-/*--------------------------------------*/
+//*--------------------------------------*/
+//* Footer
+//*--------------------------------------*/
 footer#footer {
   padding: 10px 0;
   border-top: $default_border;
 }
 
-/*--------------------------------------*/
-/* Paragraphs
-/*--------------------------------------*/
+//*--------------------------------------*/
+//* Paragraphs
+//*--------------------------------------*/
 p {
   padding: 10px 0;
 }
 
-/*--------------------------------------*/
-/* Tables
-/*--------------------------------------*/
+//*--------------------------------------*/
+//* Tables
+//*--------------------------------------*/
 table {
   thead {
     background-color: $table_head_color;
@@ -277,9 +277,9 @@ table {
   }
 }
 
-/*--------------------------------------*/
-/* Navigation
-/*--------------------------------------*/
+///*--------------------------------------*/
+///* Navigation
+///*--------------------------------------*/
 nav#top-nav-bar {
   text-align: right;
   margin-top: 20px;
@@ -299,17 +299,26 @@ nav#top-nav-bar {
 }
 
 nav #main-nav-bar {
-  text-transform: uppercase;
-  font-weight: bold;
   margin-top: 20px;
-  border-bottom: $default_border;
-  padding-bottom: 6px;
+  padding: 10px 0 6px;
+  border-top:2px solid $orange_brand_light;
+
+  .taxon {
+    color: black;
+    margin-right: 10px;
+  }
 
   li {
 
     a {
-      font-size: $horizontal_navigation_font_size;
+      text-transform: uppercase;
+      font-family: $ff_headers;
+      font-size: $main_navigation_font_size;
+      letter-spacing: 4px;
       padding: 5px;
+      &:hover{
+        color: $orange_brand;
+      }
     }
 
     &:first-child {
@@ -321,10 +330,6 @@ nav #main-nav-bar {
     &#link-to-cart {
       float: right;
       padding-left: 24px;
-      background: image-url("spree/frontend/cart.png") no-repeat left center;
-
-      &:hover {
-        border-color: $link_text_color;
 
         .amount {
           border-color: $link_text_color;
@@ -333,8 +338,12 @@ nav #main-nav-bar {
 
       a {
         font-weight: normal;
-        font-size: $horizontal_navigation_font_size;
+        font-size: $main_navigation_font_size;
         color: $link_text_color;
+
+        &:hover{
+          color:$orange_brand;
+        }
 
         .amount {
           font-size: $horizontal_navigation_font_size + 2;
@@ -346,7 +355,6 @@ nav #main-nav-bar {
       }
     }
   }
-}
 
 nav#taxonomies {
   .taxonomy-root {
@@ -381,9 +389,9 @@ nav#taxonomies {
   }
 }
 
-/*--------------------------------------*/
-/* Flash notices & errors
-/*--------------------------------------*/
+///*--------------------------------------*/
+///* Flash notices & errors
+///*--------------------------------------*/
 .flash {
   padding: 10px;
   color: $layout_background_color;
@@ -419,16 +427,9 @@ nav#taxonomies {
   }
 }
 
-/*--------------------------------------*/
-/* Main search bar
-/*--------------------------------------*/
-#search-bar {
-  display: block;
-}
-
-/*--------------------------------------*/
-/* Products
-/*--------------------------------------*/
+///*--------------------------------------*/
+///* Products
+///*--------------------------------------*/
 [data-hook="product_show"] {
   h6 {
     font-size: $product_detail_title_font_size;
@@ -472,6 +473,7 @@ span.price {
 }
 
 ul#products {
+
   &:after {
     content: " ";
     display: block;
@@ -483,42 +485,44 @@ ul#products {
 
   li {
     text-align: center;
-    font-weight: bold;
     margin-bottom: 20px;
+    opacity: 0.95;
+
+  &:hover{
+    opacity: 1;
+    img {
+      box-shadow: 1px 1px rgba(247, 175, 161, 0.5);
+    }
+  }
 
     a {
       display: block;
 
       &.info {
-        height: 35px;
-        margin-top: 5px;
+        // margin-top: 5px;
+        text-transform: uppercase;
         font-size: $product_list_name_font_size;
-        color: $product_link_text_color;
-        border-bottom: $default_border;
+        color: $link_text_color;
         overflow: hidden;
       }
     }
 
     .product-image {
-      border: $default_border;
       padding: 5px;
       min-height: 110px;
       background-color: $product_background_color;
 
-      &:hover {
-        border-color: $link_text_color;
-      }
-
       img {
-        max-width: 100%; /* Fluid images for product */
+        // max-width: 100%; //* Fluid images for product */
       }
 
     }
 
     .price {
-      color: $link_text_color;
-      font-size: $product_list_price_font_size;
-      padding-top: 5px;
+      color: $orange_brand;
+      font-size: $main_navigation_font_size;
+      letter-spacing: 2px;
+      // padding-top: 5px;
       display: block;
     }
   }
@@ -567,7 +571,7 @@ ul#products {
 
     img {
       min-height: 240px;
-      max-width: 100%; /* Fluid images for product */
+      max-width: 100%; //* Fluid images for product */
     }
   }
   #product-thumbnails {
@@ -633,9 +637,9 @@ ul#products {
   }
 }
 
-/*--------------------------------------*/
-/* Checkout
-/*--------------------------------------*/
+//*--------------------------------------*/
+//* Checkout
+//*--------------------------------------*/
 .out-of-stock {
   background: #df0000;
   color: white;
@@ -937,9 +941,9 @@ p[data-hook="use_billing"] {
   }
 }
 
-/*--------------------------------------*/
-/* Cart
-/*--------------------------------------*/
+//*--------------------------------------*/
+//* Cart
+//*--------------------------------------*/
 table#cart-detail {
   width: 100%;
   border-collapse: separate;
@@ -1001,9 +1005,9 @@ div[data-hook="inside_cart_form"] {
 
 }
 
-/*--------------------------------------*/
-/* Account
-/*--------------------------------------*/
+//*--------------------------------------*/
+//* Account
+//*--------------------------------------*/
 #existing-customer, #new-customer, #forgot-password {
   h6 {
     text-transform: uppercase;
@@ -1031,9 +1035,9 @@ div[data-hook="inside_cart_form"] {
   }
 }
 
-/*--------------------------------------*/
-/* Order
-/*--------------------------------------*/
+//*--------------------------------------*/
+//* Order
+//*--------------------------------------*/
 #order_summary {
   margin-top: 0;
 }
@@ -1063,15 +1067,15 @@ table.order-summary {
   }
 }
 
-/* #Media Queries
-================================================== */
+//* #Media Queries
+//================================================== */
 
-/* Smaller than standard 960 (devices and browsers) */
+//* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
 
 }
 
-/* Tablet Portrait size to standard 960 (devices and browsers) */
+//* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .container {
     padding-left: 10px;
@@ -1085,7 +1089,7 @@ table.order-summary {
   }
 }
 
-/* All Mobile Sizes (devices and browser) */
+//* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
 
   html {
@@ -1138,7 +1142,7 @@ table.order-summary {
   }
 }
 
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+//* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
   footer#footer {
@@ -1216,12 +1220,12 @@ table.order-summary {
 
 @media only screen and (max-width: 767px) {
   #empty-cart {
-    /* yes, this is ugly... */
+    //* yes, this is ugly... */
     margin-top: 0 !important;
   }
 }
 
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+//* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
 
   .progress-steps li {
@@ -1318,6 +1322,9 @@ table.order-summary {
 
       &.secondary, &.omega {
         margin-right: 0;
+      }
+      .secondary{
+        float:right;
       }
     }
   }

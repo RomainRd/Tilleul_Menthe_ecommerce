@@ -7,22 +7,26 @@ $c_red:         #e45353 !default;  /* Error red      */
 $layout_background_color:   #FFFFFF !default;
 $title_text_color:          #404042 !default;
 $body_text_color:           #404042 !default;
-$link_text_color:           #00ADEE !default;
+$link_text_color:           #555555 !default;
 
 $product_background_color:  #FFFFFF !default;
 $product_title_text_color:  #404042 !default;
 $product_body_text_color:   #404042 !default;
 $product_link_text_color:   #BBBBBB !default;
 
+$orange_brand:              #FF3600 !default;
+$orange_brand_light:        #F7AFA1 !default;
+
 /*--------------------------------------*/
 /* Fonts import from remote
 /*--------------------------------------*/
-@import url(//fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic|&subset=latin,cyrillic,greek,greek-ext,latin-ext,cyrillic-ext);
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro');
 
 /*--------------------------------------*/
 /* Font families
 /*--------------------------------------*/
-$ff_base:       'Ubuntu', sans-serif !default;
+$ff_base:       'Montserrat';
+$ff_headers:    'Montserrat';
 
 /*--------------------------------------
   | Font sizes
