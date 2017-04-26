@@ -491,7 +491,7 @@ ul#products {
   &:hover{
     opacity: 1;
     img {
-      box-shadow: 1px 1px rgba(247, 175, 161, 0.5);
+      box-shadow: 3px 3px rgba(255, 63, 0, 0.5);
     }
   }
 
@@ -514,6 +514,7 @@ ul#products {
 
       img {
         // max-width: 100%; //* Fluid images for product */
+        min-height: 100px;
       }
 
     }
