@@ -1,0 +1,119 @@
+///*--------------------------------------*/
+///* Nav Bar Logo
+///*--------------------------------------*/
+
+#logo{
+  width: auto;
+  margin-top: 5vh;
+}
+
+.logo-wrapper{
+  min-height: 20vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+///*--------------------------------------*/
+///* Navigation Nav Bar
+///*--------------------------------------*/
+
+
+nav#top-nav-bar {
+  text-align: right;
+  margin-top: 20px;
+
+  ul {
+    li {
+      margin-bottom: 5px;
+      padding-left: 10px;
+
+      a{
+        font-weight: bold;
+        font-size: $header_navigation_font_size;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+#main-nav-bar-wrapper{
+  margin-left: 0;
+  width: 100%;
+
+  #main-nav-bar {
+    margin-top: 20px;
+    padding: 10px 0 6px;
+    border-top:2px solid $orange_brand_light;
+
+    .taxon {
+      color: black;
+      margin-right: 10px;
+    }
+
+    li {
+
+      a {
+        text-transform: uppercase;
+        font-family: $ff_headers;
+        font-size: $main_navigation_font_size;
+        letter-spacing: 4px;
+        padding: 5px;
+        &:hover{
+          color: $orange_brand;
+        }
+      }
+
+      &:first-child {
+        a {
+          padding-left: 0
+        }
+      }
+
+      &#link-to-cart {
+        float: right;
+        padding-left: 24px;
+
+          .amount {
+            border-color: $link_text_color;
+          }
+        }
+
+        a {
+          font-weight: normal;
+          font-size: $main_navigation_font_size;
+          color: $link_text_color;
+
+          &:hover{
+            color:$orange_brand;
+          }
+
+          .amount {
+            font-size: $horizontal_navigation_font_size + 2;
+            font-weight: bold;
+            border-left: $default_border;
+            padding-left: 5px;
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+
+  #taxonomies {
+    .taxonomy-root {
+      text-transform: uppercase;
+      border-bottom: $default_border;
+      margin-bottom: 5px;
+      font-size: $main_navigation_header_font_size;
+    }
+
+    .taxons-list {
+      li {
+        a {
+          font-size: $main_navigation_font_size
+        }
+      }
+    }
+  }
+}
+

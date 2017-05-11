@@ -6,7 +6,8 @@
 
 @import 'spree/frontend/skeleton';
 @import 'spree/frontend/variables';
-@import 'spree/frontend/navbar_logo';
+@import 'spree/frontend/navbar';
+@import 'spree/frontend/home-image';
 @import 'font-awesome';
 
 //*--------------------------------------*/
@@ -280,98 +281,6 @@ table {
 ///*--------------------------------------*/
 ///* Navigation
 ///*--------------------------------------*/
-nav#top-nav-bar {
-  text-align: right;
-  margin-top: 20px;
-
-  ul {
-    li {
-      margin-bottom: 5px;
-      padding-left: 10px;
-
-      a{
-        font-weight: bold;
-        font-size: $header_navigation_font_size;
-        text-transform: uppercase;
-      }
-    }
-  }
-}
-
-nav #main-nav-bar {
-  margin-top: 20px;
-  padding: 10px 0 6px;
-  border-top:2px solid $orange_brand_light;
-
-  .taxon {
-    color: black;
-    margin-right: 10px;
-  }
-
-  li {
-
-    a {
-      text-transform: uppercase;
-      font-family: $ff_headers;
-      font-size: $main_navigation_font_size;
-      letter-spacing: 4px;
-      padding: 5px;
-      &:hover{
-        color: $orange_brand;
-      }
-    }
-
-    &:first-child {
-      a {
-        padding-left: 0
-      }
-    }
-
-    &#link-to-cart {
-      float: right;
-      padding-left: 24px;
-
-        .amount {
-          border-color: $link_text_color;
-        }
-      }
-
-      a {
-        font-weight: normal;
-        font-size: $main_navigation_font_size;
-        color: $link_text_color;
-
-        &:hover{
-          color:$orange_brand;
-        }
-
-        .amount {
-          font-size: $horizontal_navigation_font_size + 2;
-          font-weight: bold;
-          border-left: $default_border;
-          padding-left: 5px;
-          padding-bottom: 5px;
-        }
-      }
-    }
-  }
-
-nav#taxonomies {
-  .taxonomy-root {
-    text-transform: uppercase;
-    border-bottom: $default_border;
-    margin-bottom: 5px;
-    font-size: $main_navigation_header_font_size;
-  }
-
-  .taxons-list {
-    li {
-      a {
-        font-size: $main_navigation_font_size
-      }
-    }
-  }
-}
 
 #breadcrumbs {
   border-bottom: $default_border;
@@ -509,12 +418,11 @@ ul#products {
 
     .product-image {
       padding: 5px;
-      min-height: 110px;
       background-color: $product_background_color;
 
-      img {
+      .product-img {
         // max-width: 100%; //* Fluid images for product */
-        min-height: 100px;
+        min-height: 240px;
       }
 
     }
