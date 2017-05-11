@@ -1,0 +1,23 @@
+<% if @product.price_for(current_pricing_options) and !@product.price.nil? %>
+  <div id="product-price">
+    <div>
+      <span class="price selling" itemprop="price">
+        -- <%= display_price(@product) %> --
+      </span>
+      <span itemprop="priceCurrency" content="<%= current_pricing_options.currency %>"></span>
+    </div>
+
+    <% if @product.master.can_supply? %>
+      <link itemprop="availability" href="http://schema.org/InStock" />
+    <% elsif @product.variants.empty? %>
+      <br />
+      <span class="out-of-stock"><%= Spree.t(:out_of_stock) %></span>
+    <% end %>
+  </div>
+
+<% else %>
+  <div id="product-price">
+    <br>
+    <div><span class="price selling" itemprop="price"><%= Spree.t('product_not_available_in_this_currency') %></span></div>
+  </div>
+<% end %>
