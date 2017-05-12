@@ -38,6 +38,20 @@
             <div id="description" itemprop="description" data-hook="description">
               <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
             </div>
+            <div id="social">
+              <ul id="social-container">
+                <li class="social-icon">
+                </li>
+                <li class="social-icon">
+                  <%= link_to "", {onClick: "window.open('https://twitter.com/intent/tweet?text=#{@product.name} - http://localhost:3000/products/#{@product.slug} <3 <3','','width=600,height=300'); return false;"} do %>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  <% end %>
+                </li>
+                <li class="social-icon">
+
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div id="cart-form" data-hook="cart_form">

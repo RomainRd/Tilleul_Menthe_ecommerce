@@ -134,7 +134,8 @@ ul#products {
     background-color: $product_background_color;
 
     img {
-      min-height: 30vw;
+      min-height: 32vw;
+      max-height: 32vw;
       max-width: 100%; //* Fluid images for product */
     }
   }
@@ -150,7 +151,8 @@ ul#products {
 }
 
 #product-description-all {
-  min-height: 30vw;
+  min-height: 32vw;
+  max-height: 32vw;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
