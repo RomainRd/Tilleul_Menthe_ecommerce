@@ -135,7 +135,6 @@ ul#products {
 
     img {
       min-height: 32vw;
-      max-height: 32vw;
       max-width: 100%; //* Fluid images for product */
     }
   }
@@ -152,12 +151,15 @@ ul#products {
 
 #product-description-all {
   min-height: 32vw;
-  max-height: 32vw;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 
   #description-price-social{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
     .product-title {
       margin-bottom: 20px;
       color: $product_title_text_color;
@@ -167,20 +169,98 @@ ul#products {
       text-shadow: 2px 2px $orange_brand_light;
     }
 
+    #product-price{
+      margin-bottom: 20px;
+    }
+
     #description{
       text-align: justify;
+      margin-bottom: 30px;
+    }
+
+    #social{
+      margin-bottom: 20px;
+      #social-container, .social-icon {
+        margin-right: 1.4em;
+        list-style-type: none;
+        display: inline;
+        font-size: 1.38em;
+
+        #facebook > a {
+          color: #3B5998;
+        }
+
+        #twitter > a {
+          color: #1DA1F2;
+        }
+
+        #pinterest > span {
+          height: 20px;
+          width: 20px;
+          background-size: 20px 22px;
+          text-align: center;
+        }
+      }
+
     }
 
     [data-hook="product-description"] {
       font-size: $product_detail_description_font_size;
       color: $product_body_text_color;
     }
-
-    #product-price{
-      margin-bottom: 20px;
-    }
   }
 }
+
+  .icon-cart::before{
+    font-family: FontAwesome;
+    content: "\f291";
+  }
+
+  button.button-cart{
+    position: relative;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid $border_color;
+    color: $product_body_text_color;
+    box-shadow: none;
+    border-radius: 0;
+    font-weight: normal;
+    overflow: hidden;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+    &::before{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: -100%;
+
+      color: white;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none;
+      line-height: 3;
+
+      transition-duration: 0.5s;
+      transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+
+    &:hover{
+      border: 1px solid white;
+      color: white;
+      background-color: rgba(132, 130, 130, 0.8);
+      span {
+        color: transparent;
+      }
+      &::before{
+        background-color: $orange_brand;
+        top: 0%;
+      }
+    }
+  }
 
 #product-thumbnails {
   margin-top: 10px;

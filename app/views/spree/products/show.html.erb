@@ -40,15 +40,26 @@
             </div>
             <div id="social">
               <ul id="social-container">
-                <li class="social-icon">
+                <li class="social-icon" id="facebook">
+                  <%= link_to "", {onClick: "window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A//localhost%3A3000/products/#{@product.slug}','','width=600,height=300'); return false;"} do %>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  <% end %>
                 </li>
-                <li class="social-icon">
+
+                <li class="social-icon" id="twitter">
                   <%= link_to "", {onClick: "window.open('https://twitter.com/intent/tweet?text=#{@product.name} - http://localhost:3000/products/#{@product.slug} <3 <3','','width=600,height=300'); return false;"} do %>
                     <i class="fa fa-twitter" aria-hidden="true"></i>
                   <% end %>
                 </li>
-                <li class="social-icon">
 
+                <li class="social-icon" id="pinterest">
+                  <a data-pin-do="buttonPin"
+                    href="https://www.pinterest.com/pin/create/button/"
+                    data-pin-description=""
+                    data-pin-media =""
+                    data-pin-url=""
+                    data-pin-shape="round"
+                    ></a>
                 </li>
               </ul>
             </div>
@@ -65,3 +76,9 @@
         <%#= render partial: 'taxons' %>
   </div>
 <% end %>
+
+<script
+    type="text/javascript"
+    async defer
+    src="//assets.pinterest.com/js/pinit.js"
+></script>

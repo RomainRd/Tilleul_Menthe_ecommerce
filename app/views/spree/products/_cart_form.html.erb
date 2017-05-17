@@ -49,10 +49,10 @@
         </div>
 
         <div class="add-to-cart">
-          <%= number_field_tag :quantity, 1, class: 'title', min: 1 %>
-          <%= button_tag class: 'large primary', id: 'add-to-cart-button', type: :submit do %>
-            <span>Ajouter au panier</span>
-          <% end %>
+          <%= number_field_tag :quantity, 1, class: 'title hidden', min: 1 %>
+            <%= button_tag class: 'button-cart icon-cart', id: 'add-to-cart-button', type: :submit do %>
+              <span id="add-cart-span">Ajouter au panier</span>
+            <% end %>
         </div>
     <% else %>
         <div class="hidden" id="product-price">
