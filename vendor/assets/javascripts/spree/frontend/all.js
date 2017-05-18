@@ -7,4 +7,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require spree/frontend
+//= require jquery.flexslider
 //= require_tree .
+
+  $(document).ready(function(){
+    $('.flexslider').flexslider({
+      animation: "slide"
+    });
+  });

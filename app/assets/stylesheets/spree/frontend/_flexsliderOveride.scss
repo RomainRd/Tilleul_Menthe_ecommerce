@@ -1,0 +1,12 @@
+.flexslider{
+  margin: 0px 0 35px;
+}
+
+.flex-control-nav, .flex-control-paging, .flex-direction-nav{
+  display: none;
+}
+
+.flexslider .slides img {
+  height: 65vh;
+  width: 100%;
+}
