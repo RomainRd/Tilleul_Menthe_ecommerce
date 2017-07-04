@@ -24,7 +24,7 @@
     .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
     .container .column,
     .container .columns                         { float: left; display: inline; margin-left: 20px; margin-right: 20px; }
-    .row                                        { margin-bottom: 20px; }
+    .row                                        { margin-bottom: 0px; }
 
     /* Nested Column Classes */
     .column.alpha, .columns.alpha               { margin-left: 0; }
@@ -132,7 +132,7 @@
     @media only screen and (max-width: 767px) {
         .container { width: 300px; }
         .container .columns,
-        .container .column { margin: 0; }
+        .container .column { float:none; margin: 0; }
 
         .container .one.column,
         .container .one.columns,
@@ -182,7 +182,7 @@
     @media only screen and (min-width: 480px) and (max-width: 767px) {
         .container { width: 420px; }
         .container .columns,
-        .container .column { margin: 0; }
+        .container .column { float:none; margin: 0; }
 
         .container .one.column,
         .container .one.columns,

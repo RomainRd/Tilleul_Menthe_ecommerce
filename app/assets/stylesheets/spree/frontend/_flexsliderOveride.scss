@@ -1,5 +1,5 @@
 .flexslider{
-  margin: 0px 0 35px;
+  margin: 0 0 2.8vh 0;
 }
 
 .flex-control-nav, .flex-control-paging, .flex-direction-nav{
@@ -7,6 +7,7 @@
 }
 
 .flexslider .slides img {
-  height: 65vh;
+  min-height: 28vh;
+  max-height: 60vh;
   width: 100%;
 }
