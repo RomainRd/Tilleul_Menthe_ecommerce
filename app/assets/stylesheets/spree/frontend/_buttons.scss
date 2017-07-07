@@ -1,0 +1,63 @@
+button.button-cart{
+    position: relative;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid $border_color;
+    color: $product_body_text_color;
+    box-shadow: none;
+    border-radius: 0;
+    font-weight: normal;
+    overflow: hidden;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+    &::before{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: -100%;
+
+      color: white;
+      font-style: normal;
+      font-weight: normal;
+      text-transform: none;
+      line-height: 3;
+
+      transition-duration: 0.5s;
+      transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+
+    &:hover{
+      border: 1px solid white;
+      color: white;
+      background-color: rgba(132, 130, 130, 0.8);
+      span {
+        color: transparent;
+      }
+      &::before{
+        background-color: $orange_brand;
+        top: 0%;
+      }
+    }
+  }
+
+.button.next{
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 35px;
+  font-size: 14px;
+  background-color: white;
+  border: 1px solid $border_color;
+  color: $product_body_text_color;
+  box-shadow: none;
+  border-radius: 0;
+  font-weight: normal;
+  &:hover{
+    background-color: $orange_brand_light;
+    border: 1px solid $border_color;
+    color: $orange_brand;
+  }
+}

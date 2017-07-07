@@ -1,0 +1,20 @@
+#panier-title{
+  font-weight: lighter;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $header_navigation_font_size;
+}
+
+#warning-panier{
+  font-size: 15px;
+}
+
+#cart-detail{
+  tr:first-child th{
+    background-color: $layout_background_color;
+    font-weight: normal;
+    letter-spacing: 1.3px;
+    color: $header_navigation_font_size;
+    border-bottom: 1px solid $border-color
+  }
+}
