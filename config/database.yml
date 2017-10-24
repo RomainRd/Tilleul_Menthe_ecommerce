@@ -24,6 +24,11 @@ default: &default
 development:
   <<: *default
   database: Tilleul_Menthe_ecommerce_development
+  url: <%= ENV['DATABASE_URL'] %>
+
+test:
+  <<: *default
+  database: Tilleul_Menthe_ecommerce_test
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

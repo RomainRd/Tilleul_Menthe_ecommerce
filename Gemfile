@@ -20,6 +20,8 @@ gem 'solidus_auth_devise'
 gem 'flex-slider-rails', '~> 2.6', '>= 2.6.3'
 gem 'coffee-script', '~> 2.4', '>= 2.4.1'
 gem 'jquery-turbolinks'
+gem 'aws-sdk'
+
 
 group :development, :test do
   gem 'binding_of_caller'
