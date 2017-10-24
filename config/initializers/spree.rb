@@ -50,29 +50,8 @@ Spree.config do |config|
   #   server: Rails.env.production? ? 'production' : 'test',
   #   test_mode: !Rails.env.production?
   # )
-end
 
-Spree::Frontend::Config.configure do |config|
-  config.use_static_preferences!
-
-  config.locale = 'en'
-end
-
-Spree::Backend::Config.configure do |config|
-  config.use_static_preferences!
-
-  config.locale = 'en'
-end
-
-Spree::Api::Config.configure do |config|
-  config.use_static_preferences!
-
-  config.requires_authentication = true
-end
-
-Spree.user_class = "Spree::LegacyUser"
-
-if Rails.env.production?
+  if Rails.env.production?
   attachment_config = {
     s3_credentials: {
       access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
@@ -102,3 +81,24 @@ if Rails.env.production?
     Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
   end
 end
+end
+
+Spree::Frontend::Config.configure do |config|
+  config.use_static_preferences!
+
+  config.locale = 'en'
+end
+
+Spree::Backend::Config.configure do |config|
+  config.use_static_preferences!
+
+  config.locale = 'en'
+end
+
+Spree::Api::Config.configure do |config|
+  config.use_static_preferences!
+
+  config.requires_authentication = true
+end
+
+Spree.user_class = "Spree::LegacyUser"
