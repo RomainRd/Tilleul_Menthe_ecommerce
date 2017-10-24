@@ -11,7 +11,7 @@ Spree.config do |config|
   # Core:
 
   # Default currency for new sites
-  config.currency = "EUR"
+  config.currency = "USD"
 
   # from address for transactional emails
   config.mails_from = "store@example.com"
@@ -50,8 +50,29 @@ Spree.config do |config|
   #   server: Rails.env.production? ? 'production' : 'test',
   #   test_mode: !Rails.env.production?
   # )
+end
 
-  if Rails.env.production?
+Spree::Frontend::Config.configure do |config|
+  config.use_static_preferences!
+
+  config.locale = 'en'
+end
+
+Spree::Backend::Config.configure do |config|
+  config.use_static_preferences!
+
+  config.locale = 'en'
+end
+
+Spree::Api::Config.configure do |config|
+  config.use_static_preferences!
+
+  config.requires_authentication = true
+end
+
+Spree.user_class = "Spree::LegacyUser"
+
+if Rails.env.production?
   attachment_config = {
     s3_credentials: {
       access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
@@ -81,24 +102,3 @@ Spree.config do |config|
     Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
   end
 end
-end
-
-Spree::Frontend::Config.configure do |config|
-  config.use_static_preferences!
-
-  config.locale = 'en'
-end
-
-Spree::Backend::Config.configure do |config|
-  config.use_static_preferences!
-
-  config.locale = 'en'
-end
-
-Spree::Api::Config.configure do |config|
-  config.use_static_preferences!
-
-  config.requires_authentication = true
-end
-
-Spree.user_class = "Spree::LegacyUser"
