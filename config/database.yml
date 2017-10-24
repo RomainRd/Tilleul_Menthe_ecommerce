@@ -77,8 +77,5 @@ test:
 #
 production:
   <<: *default
-  database: Tilleul_Menthe_ecommerce_production
-  username: Tilleul_Menthe_ecommerce
-  password: <%= ENV['TILLEUL_MENTHE_ECOMMERCE_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_URL'] %>
 
