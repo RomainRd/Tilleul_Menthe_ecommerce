@@ -15,12 +15,12 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
-gem 'solidus', '~> 2.1.0'
+gem 'solidus'
 gem 'solidus_auth_devise'
 gem 'flex-slider-rails', '~> 2.6', '>= 2.6.3'
 gem 'coffee-script', '~> 2.4', '>= 2.4.1'
 gem 'jquery-turbolinks'
-gem 'aws-sdk', '< 2.0'
+gem 'aws-sdk'
 
 
 group :development, :test do
